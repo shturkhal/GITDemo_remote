@@ -11,14 +11,24 @@ class ViewController: UIViewController {
 
     // MARK: Properties
     
-    var label: UILabel!
+    var myLabel = UILabel(frame: CGRect(x: 150, y: 150, width: 70, height: 70))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(label)
+        
+        setLabel(label: myLabel)
         // Do any additional setup after loading the view.
     }
 
+    // MARK: Functions
+    func setLabel(label: UILabel) {
+        
+        label.center = self.view.center
+        label.textColor = .yellow
+        label.text = "Hello"
+        view.addSubview(label)
+        
+    }
 
 }
 
